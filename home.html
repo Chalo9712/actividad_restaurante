@@ -1,33 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Restaurante</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante - Inicio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+      object-fit: cover;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: 18rem;
+      margin-bottom: 15px;
+      border-radius: 10px; /* Redondear las esquinas de la tarjeta */
+      overflow: hidden; /* Asegura que el contenido no sobresalga de la tarjeta */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    }
+    .card-body {
+      flex-grow: 1;
+      padding: 15px;
+      background-color: #f9f9f9; /* Fondo suave para el contenido */
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #343a40; /* Color oscuro para los títulos */
+      margin-bottom: 10px;
+    }
+    .card-text {
+      font-size: 0.95rem;
+      color: #6c757d; /* Color gris para los textos */
+      line-height: 1.6;
+    }
+    .card-footer {
+      background-color: #343a40;
+      color: white;
+      padding: 8px 15px;
+      text-align: center;
+      font-size: 0.875rem;
+      border-top: 1px solid #eaeaea;
+      border-radius: 0 0 10px 10px; /* Esquinas redondeadas en el pie */
+    }
+    .card:hover {
+      transform: translateY(-5px); /* Efecto de elevación cuando pasa el mouse */
+      transition: transform 0.2s ease-in-out;
+    }
+    .row-separator {
+      margin-top: 30px;
+    }
+    .card-body p {
+      margin-bottom: 10px; /* Separación entre el párrafo y los elementos debajo */
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    
-    <!-- Navbar -->
-     <nav class="bg-gray-900 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Directorio de Restaurante</h1>
-            <div class="space-x-4">
-                <a href="" class="hover:text-blue-300">Home</a>
-                <a href="" class="hover:text-blue-300">Search</a>
-                <a href="" class="hover:text-blue-300">New</a>
-            </div>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-4" href="#">Directorio de Restaurante</a>
+      <div class="ms-auto">
+        <ul class="navbar-nav d-flex flex-row gap-3">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="search.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="new-restaurant.html">New</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Contenedor de restaurantes -->
+  <div class="container mt-4">
+    <h2 class="text-center fw-bold fs-3">Nuestros Restaurantes</h2>
+
+    <!-- Fila 1: 3 tarjetas -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Tarjeta 1 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://img.freepik.com/foto-gratis/plato-brasileno-sabroso-alto-angulo-naranja_23-2148875285.jpg?ga=GA1.1.47313963.1746150490&semt=ais_hybrid&w=740" class="card-img-top" alt="Restaurante 1">
+          <div class="card-body">
+            <h5 class="card-title">Restaurante El Buen Sabor</h5>
+            <p class="card-text">Disfruta de la mejor comida tradicional en un ambiente familiar.</p>
+            <p><strong>Dirección:</strong> Calle 123, Zona Norte, Ciudad.</p>
+          </div>
+          <div class="card-footer"></div>
         </div>
-     </nav>
-<div class="container mx-auto">
-    <h2 class="text-3xl font-bold text-center"></h2>
-</div>
+      </div>
 
-    
+      <!-- Tarjeta 2 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://img.freepik.com/foto-gratis/desayuno-flotante-increible-villa-hotel-piscina-azul_343596-1029.jpg?ga=GA1.1.47313963.1746150490&semt=ais_hybrid&w=740" class="card-img-top" alt="Restaurante 2">
+          <div class="card-body">
+            <h5 class="card-title">Sabor del Mar</h5>
+            <p class="card-text">Especialidad en mariscos frescos y platos a la parrilla.</p>
+            <p><strong>Dirección:</strong> Avenida 45, Frente al mar, Ciudad.</p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
 
+      <!-- Tarjeta 3 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://img.freepik.com/foto-gratis/deliciosa-pizza-interior_23-2151231348.jpg?ga=GA1.1.47313963.1746150490&semt=ais_hybrid&w=740" class="card-img-top" alt="Restaurante 3">
+          <div class="card-body">
+            <h5 class="card-title">La Casa de la Pizza</h5>
+            <p class="card-text">Las mejores pizzas artesanales en la ciudad, con una variedad única.</p>
+            <p><strong>Dirección:</strong> Calle 56, Zona Sur, Ciudad.</p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Fila 2: 3 tarjetas con separación -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 row-separator">
+      <!-- Tarjeta 4 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://img.freepik.com/fotos-premium/imagen-recortada-hombre-preparando-comida_1048944-20754252.jpg?ga=GA1.1.47313963.1746150490&semt=ais_hybrid&w=740" class="card-img-top" alt="Restaurante 4">
+          <div class="card-body">
+            <h5 class="card-title">Tacos El Güero</h5>
+            <p class="card-text">Tacos frescos con los mejores ingredientes mexicanos.</p>
+            <p><strong>Dirección:</strong> Calle 78, Zona Centro, Ciudad.</p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
 
+      <!-- Tarjeta 5 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://img.freepik.com/foto-gratis/filetes-carne-cocidos-llamas-parrilla_114579-1981.jpg?ga=GA1.1.47313963.1746150490&semt=ais_hybrid&w=740" class="card-img-top" alt="Restaurante 5">
+          <div class="card-body">
+            <h5 class="card-title">La Parrillada Argentina</h5>
+            <p class="card-text">Carnes asadas al estilo argentino con un toque especial.</p>
+            <p><strong>Dirección:</strong> Calle 12, Zona Norte, Ciudad.</p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- Tarjeta 6 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://img.freepik.com/foto-gratis/pastel-pescado-coreano-sopa-verduras-mesa_1150-42978.jpg?ga=GA1.1.47313963.1746150490&semt=ais_hybrid&w=740" class="card-img-top" alt="Restaurante 6">
+          <div class="card-body">
+            <h5 class="card-title">La Esquina gourmet</h5>
+            <p class="card-text">Comida gourmet con una experiencia única de sabores.</p>
+            <p><strong>Dirección:</strong> Calle 99, Zona Este, Ciudad.</p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
